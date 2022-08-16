@@ -22,7 +22,7 @@ $(call inherit-product, vendor/samsung/exynos9610-common/exynos9610-common-vendo
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
-    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio@7.1-impl:32 \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl:32 \
     android.hardware.soundtrigger@2.0-impl:32 \
