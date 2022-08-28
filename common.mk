@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/a50-common
+COMMON_PATH := device/samsung/exynos9610-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/a50-common/a50-common-vendor.mk)
+$(call inherit-product, vendor/samsung/exynos9610-common/exynos9610-common-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \

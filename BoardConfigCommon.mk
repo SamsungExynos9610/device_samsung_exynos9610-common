@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/a50-common
+COMMON_PATH := device/samsung/exynos9610-common
 
 ## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuartion
-include vendor/samsung/a50-common/BoardConfigVendor.mk
+include vendor/samsung/exynos9610-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -86,7 +86,7 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/samsung/a50-common
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos9610
 TARGET_KERNEL_CONFIG := a50_defconfig
 
 ## Keymaster

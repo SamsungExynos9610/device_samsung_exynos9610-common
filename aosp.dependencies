@@ -24,7 +24,7 @@
         "target_path": "hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib"
     },
     {
-        "repository": "android_kernel_samsung_a50-common",
-        "target_path": "kernel/samsung/a50-common"
+        "repository": "android_kernel_samsung_exynos9610",
+        "target_path": "kernel/samsung/exynos9610"
     }
 ]

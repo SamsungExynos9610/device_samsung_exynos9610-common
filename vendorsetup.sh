@@ -4,7 +4,7 @@ echo "I: - Fixing Stuff on A50 Device Trees"
 # Keystore patch
 echo "Applying Keystore patch...";
 cd system/security;
-git apply ../../device/samsung/a50-common/patch/Keystone.patch;
+git apply ../../device/samsung/exynos9610-common/patch/Keystone.patch;
 cd - 
 
 # Light patch 
@@ -13,10 +13,10 @@ cd frameworks/base && wget https://raw.githubusercontent.com/sarthakroy2002/rand
 # Health fix
 
 sudo rm -r ./hardware/interfaces/health/2.1/default/android.hardware.health@2.1-service.rc
-cp ./device/samsung/a50-common/patch/android.hardware.health@2.1-service.rc ./hardware/interfaces/health/2.1/default/
+cp ./device/samsung/exynos9610-common/patch/android.hardware.health@2.1-service.rc ./hardware/interfaces/health/2.1/default/
 
 # BT calls fix 
 
 cd system/bt;
-git apply ../../device/samsung/a50-common/.patch/BTCalls-On-Samsung.patch;
+git apply ../../device/samsung/exynos9610-common/.patch/BTCalls-On-Samsung.patch;
 cd -
