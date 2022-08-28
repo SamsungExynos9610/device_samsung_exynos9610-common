@@ -1,0 +1,34 @@
+prebuilt_etc {
+    name: "fstab.exynos9610",
+    src: "etc/fstab.exynos9610",
+    required: ["fstab.ramdisk"],
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.rc",
+    src: "etc/init.samsung.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.exynos9610.rc",
+    src: "etc/init.exynos9610.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.exynos9610.usb.rc",
+    src: "etc/init.exynos9610.usb.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.exynos9610.rc",
+    src: "etc/ueventd.rc",
+    filename: "ueventd.rc",
+    vendor: true,
+}
