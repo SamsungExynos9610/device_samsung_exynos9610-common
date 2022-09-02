@@ -1,4 +1,4 @@
-service health-hal-2-1 /vendor/bin/hw/android.hardware.health@2.1-service
+service health-hal-2-1 /vendor/bin/hw/android.hardware.health@2.1-service.exynos9610
     class hal charger
     user system
     group system

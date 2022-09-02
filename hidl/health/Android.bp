@@ -12,69 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "hardware_interfaces_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
-    default_applicable_licenses: ["hardware_interfaces_license"],
-}
-
-cc_defaults {
-    name: "android.hardware.health@2.1-impl-defaults",
-    relative_install_path: "hw",
-
-    shared_libs: [
-        "libbase",
-        "libcutils",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "android.hardware.health@2.1",
-        "android.hardware.health@2.0",
-    ],
-
-    static_libs: [
-        "android.hardware.health@1.0-convert",
-        "libbatterymonitor",
-        "libhealthloop",
-        "libhealth2impl",
-    ],
-}
-
-// Default passthrough implementation of the health@2.1 HAL.
-// Passhtrough implementations of the health@2.1 HAL must be installed in
-// vendor in order to support charger.
-// Passhtrough implementations of the health@2.1 HAL must be installed in
-// recovery in order to allow recovery to check battery status.
-// See README.md for details.
-cc_library_shared {
-    name: "android.hardware.health@2.1-impl",
-    stem: "android.hardware.health@2.0-impl-2.1",
-
-    // Only vendor and recovery variants are allowed, not core.
-    vendor: true,
-    recovery_available: true,
-
-    defaults: ["android.hardware.health@2.1-impl-defaults"],
-
-    srcs: [
-        "impl.cpp",
-    ],
-
-    // No vintf_fragments because both -impl and -service should have been
-    // installed.
-}
-
 // Default binderized service of the health@2.1 HAL.
 // This binderized implementation dlopen()s the passthrough implementation,
 // so there is no need to implement your own.
 cc_binary {
-    name: "android.hardware.health@2.1-service",
+    name: "android.hardware.health@2.1-service.exynos9610",
     vendor: true,
     defaults: ["android.hardware.health@2.1-impl-defaults"],
-    init_rc: ["android.hardware.health@2.1-service.rc"],
+    init_rc: ["android.hardware.health@2.1-service.exynos9610.rc"],
 
     srcs: [
         "service.cpp",
