@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/gta4xl-common
+COMMON_PATH := device/samsung/exynos9611-common
 
 ## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuartion
-include vendor/samsung/gta4xl-common/BoardConfigVendor.mk
+include vendor/samsung/exynos9611-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -113,7 +113,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_NO_GCC := true
-TARGET_KERNEL_SOURCE := kernel/samsung/gta4xl
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos9611
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung

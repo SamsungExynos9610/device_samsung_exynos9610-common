@@ -14,12 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/gta4xl-common
+COMMON_PATH := device/samsung/exynos9611-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/gta4xl-common/gta4xl-common-vendor.mk)
-
-PRODUCT_CHARACTERISTICS := tablet
+$(call inherit-product, vendor/samsung/exynos9611-common/exynos9611-common-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
